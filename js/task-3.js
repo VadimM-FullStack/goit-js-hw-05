@@ -16,8 +16,9 @@ class Storage {
   }
 
   removeItem(item) {
-    if (this._items.includes(item)) {
-      this._items.splice(this._items.indexOf(item), 1);
+    const removeIndex = this._items.indexOf(item);
+    if (removeIndex !== -1) {
+      this._items.splice(removeIndex, 1);
     } else {
       console.log(`Такого товара нет на складе`);
     }
